@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - FCC: TicTacToe - Spooky Edition</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css'>
+    <link rel="stylesheet" href="./css/tictac.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <html lang="en">
+    <!-- 
+These cool line icons are from Gabriele Malaspina
+(http://www.gabrielemalaspina.com/)
+-------------------------------------------------
+More similar products here: http://www.succodesign.com/
+-->
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>TicTacToe Game</title>
+        <meta name="description" content="TicTacToe Game">
+        <meta name="author" content="Golfo Vasiliou">
+
+        <!--[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <img src="https://raw.githubusercontent.com/shweteekta/Halloween_Trick_Treat/main/logo_main.png" align="left" style="width:20%; height:10%" />
+        <div id="preload">
+            <img src="https://dl.dropbox.com/s/xckof0onlc86e5x/shley-tree-2%20%281%29.png?dl=0" width="1" height="1" />
+            <img src="https://dl.dropbox.com/s/56koviiyr5b8bqp/bone_h.svg?dl=0" width="1" height="1" />
+
+
+        </div>
+        <div class="container center-align " id="ticTacToe">
+            <div class="row">
+
+                <div class="col s6 offset-s3" id="title">
+                    <h1 class="center-align">Tic Tac Toe</h1>
+                    <div class="cat"></div>
+                    <span class="headerLine left"></span>
+                    <p class="subtitle fancy center-align"><span>SPOOKY EDITION</span></p>
+                    <span class="headerLine right"></span>
+                </div>
+
+
+            </div>
+            <div class="row ">
+                <div class="col s3">
+                    <div id="score">
+                        <div>PC: <span id="pcWins">0</span></div>
+                        <div>Player: <span id="playerWins">0</span></div>
+
+                        <div>Draws: <span id="draws">0</span></div>
+                        <div>Games: <span id="games">0</span></div>
+
+                    </div>
+                </div>
+                <div class="col s6 ">
+
+
+                    <main>
+                        <div id="tokenSelection">
+                            <div class="gameText">Choose difficulty</div>
+                            <button class="difficulty active" id="easy">Easy</button>
+                            <button class="difficulty" type="submit" id="hard">Hard</button>
+                            <br />
+                            <div class="gameText">Choose your image</div>
+                            <button type="submit" class="hvr-bob"><img
+                                    src="https://dl.dropbox.com/s/d63q5jv3pefjcwb/bones.svg?dl=0" height="100"
+                                    width="100" id="tokenX"></button>
+                            <button type="submit" class="hvr-bob"><img
+                                    src="https://dl.dropbox.com/s/kxv0s79oo61smet/skull.svg?dl=0" height="100"
+                                    width="100" id="tokenO"></button>
+
+
+                        </div>
+                        <div id="gameEnd" style="display:none;">
+                            <div class="gameText" id="loseOrWin"></div>
+                            <div class="coupon" id="coupon">
+                            <p>Congrats you got a free coupon!!!</p>
+                            <input type="text" value="CGHALLOWEEN" id="myInput" disabled>
+                            <p id="myInput">Coupon Code: CGHALLOWEEN</p>
+                            <button onclick="myFunction()">Copy</button>
+                            <br>
+                            <a href="https://www.codegeeko.com/pricing.php">Visit codegeeko.com to use coupon code</a>
+                            
+                            <p>use this coupon code to get 10% discount on Codegeeko coding classes</p>
+                            
+                            
+                            </div>
+                            <div><button id="playAgain" class="hvr-bob active">Play again?</button></div>
+
+                        </div>
+                        <div class="center-align" id="canvasContainer"><canvas class="center-align"
+                                style="display:none;" id="ticTacToeCanvas" width="500" height="500"></canvas>
+                        </div>
+
+                    </main>
+                </div>
+                <div class="col s3"></div>
+            </div>
+        </div>
+
+
+    </body>
+
+    </html>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.min.css'></script>
+    <script src="./js/tictac.js"></script>
+
+</body>
+
+</html>

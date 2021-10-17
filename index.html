@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script>
+        function secondpage() {
+            var x = document.forms["serverless-form"]["Name"].value;
+            var y = document.forms["serverless-form"]["Phone"].value;
+            var z = document.forms["serverless-form"]["Friend_Phone"].value;
+            var r = document.forms["serverless-form"]["Friend_Email"].value;
+
+            if (x == "" || x == null || y == "" || y == null || z == "" || z == null || r == "" || r == null) {
+                alert("Name must be filled out");
+                return false;
+            }
+            else {
+                window.open("second.html");
+            }
+        }
+    </script>
+    <style>
+        input {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://raw.githubusercontent.com/shweteekta/Halloween_Trick_Treat/main/logo_main.png" align="left" style="width:20%; height:10%" />
+    <div class="form-container" >
+        <h1 id="title">Begin your Halloween Adventure </h1>
+
+        <form method="post" id="halloweenSupplies" name="serverless-form">
+            <div class="form-block">
+                <label>Name</label>
+                <input name="Name" type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="form-block">
+                <label>Email</label>
+                <input name="Email" type="text" placeholder="Enter your email">
+            </div>
+            <div class="form-block">
+                <label>Contact Number</label>
+                <input type="number" name="Phone" placeholder="Enter your contact number" required>
+            </div>
+            <div class="form-block">
+                <label>Friend's Name</label>
+                <input type="text" name="Friend_Name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-block">
+                <label>Friend's Email</label>
+                <input name="Friend_Email" type="text" placeholder="Enter your Friend's email">
+            </div>
+            <div class="form-block">
+                <label>Friend's Contact Number</label>
+                <input type="number" name="Friend_Phone" placeholder="Enter your Friend's contact number" required>
+            </div>
+            <div class="form-block">
+                <label>Friend's Address</label>
+                <input name="Address" type="text" placeholder="Enter your friend's name" required>
+            </div>
+            <div class="form-block">
+                <input class="submit" type="submit" onclick="secondpage()" name="submit" value="Start">
+            </div>
+
+        </form>
+        <p> Fill your details to receive wonderful halloween surprise!!!!</p>
+
+
+        <div id="other">
+            <div id="spider1">
+
+
+
+                <div id="eye">
+                    <p id="pupil"></p>
+                </div>
+
+                <div id="leg">
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <div id="leg2">
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <div id="leg3">
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <div id="leg4">
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <div id="leg5">
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <div id="leg6">
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <div id="string"></div>
+
+            </div>
+            <script src='https://use.edgefonts.net/creepster.js'></script>
+            <div id="letters">
+                <script src='https://use.edgefonts.net/eater.js'></script>
+
+                <script src='https://use.edgefonts.net/nosifer.js'></script>
+            </div>
+
+
+        </div>
+
+
+        <script>
+            const form = document.querySelector('form')
+            form.addEventListener('submit', evt => {
+                evt.preventDefault()
+
+                // Validate input
+            })
+            const scriptURLC = 'https://script.google.com/macros/s/AKfycbyts4JSKTfeZx7phkwzxw9zwmLnGKNDDu5P4z9BYDSJ8NCzo-ql93S7u0-6GK6T7Eed/exec';
+            const serverlessForm = document.forms['serverless-form'];
+
+            serverlessForm.addEventListener('submit', e => {
+                e.preventDefault();
+
+
+
+                fetch(scriptURLC, {
+                    method: 'POST',
+                    body: new FormData(serverlessForm)
+                })
+                    .then(res => {
+
+                        console.log(res);
+                        spinner.hide();
+
+                        if (res['status'] == 200) {
+                            alert("Your form has been submitted!",
+                                "We will get back to you soon. Have a great day!", "success");
+                            return true;
+
+                        } else {
+                            alert("");
+
+                        }
+                        document.getElementById('submitForm').classList.remove('loading');
+                    })
+                    .catch(error => {
+
+                        alert("");
+                        // todo enable submit button
+
+                    })
+            });
+        </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+.difficulty {
+   width: 150px;
+   height: 150px;
+ }
+ 
+ .active {
+   background: url(https://dl.dropbox.com/s/60zpke069pjb6tz/bat.svg?dl=0);
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 100px;
+ }
+ 
+ .fancy {
+   line-height: 0.5;
+   text-align: center;
+ }
+ 
+ .fancy span {
+   display: inline-block;
+   position: relative;
+   font-size: 30px;
+ }
+ 
+ .fancy span:before,
+ .fancy span:after {
+   content: "";
+   position: absolute;
+   height: 5px;
+   border-bottom: 1px solid #7c6e76;
+   border-top: 1px solid #7c6e76;
+   top: 0;
+   width: 100px;
+ }
+ 
+ .fancy span:before {
+   right: 100%;
+   margin-right: 15px;
+   font-size: 28px;
+ }
+ 
+ .fancy span:after {
+   left: 100%;
+   margin-left: 15px;
+ }
+ 
+ main {
+   border-radius: 13px 13px 13px 13px;
+   -moz-border-radius: 13px 13px 13px 13px;
+   -webkit-border-radius: 13px 13px 13px 13px;
+   border: 5px solid #000000;
+   background-color: rgba(51, 50, 50, 0.32);
+   padding: 15px 0 15px 0;
+   height: 540px;
+ }
+ 
+ #tokenSelection {
+   margin-top: 30px;
+ }
+ 
+ #gameEnd {
+   margin-top: 30px;
+ }
+ 
+ #tokenSelection>button {
+   margin: 30px 30px 30px 30px;
+ }
+ 
+ button {
+   background-color: transparent;
+   background-repeat: no-repeat;
+   border: none;
+   cursor: pointer;
+   overflow: hidden;
+   outline: none;
+   font-size: 30px;
+ }
+ 
+ button:focus {
+   background-color: transparent;
+ }
+ 
+ .valign-wrapper {
+   height: 100px;
+ }
+ 
+ #score {
+   color: #a19f9f;
+   text-shadow: 2px 2px black;
+   height: 300px;
+   width: 250;
+   background: url(https://dl.dropbox.com/s/a1ps0rio4s8bi24/tomb.svg?dl=0);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   padding-top: 80px;
+   font-size: 30px;
+   margin-top: 240px;
+ }
+ 
+ body {
+   background: #130912;
+   font-family: 'ghoulish';
+   color: #7c6e76;
+   background-color: #130912;
+   background-image: url("https://dl.dropbox.com/s/xckof0onlc86e5x/shley-tree-2%20%281%29.png?dl=0");
+   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+ }
+ 
+ @font-face {
+   font-family: 'ghoulish';
+   /*a name to be used later*/
+   src: url('https://dl.dropbox.com/s/2fciaz6wz89d2au/Ghoulish.ttf?dl=0');
+   /*URL to font*/
+ }
+ 
+
+ 
+ h1 {
+   font-family: 'ghoulish';
+   margin: 2.1rem 0 0rem 0;
+   font-size: 90px;
+ }
+ 
+ .headerLine {
+   background-color: black;
+   display: inline-block;
+   height: 25px;
+ }
+ 
+ #tokenSelection>button:active {
+   background-color: transparent;
+ }
+ 
+ #tokenSelection>button:focus {
+   background-color: transparent;
+ }
+ 
+ button>img {
+   -webkit-animation-iteration-count: 1;
+ }
+ 
+ .magictime {
+   -webkit-animation-duration: 1s;
+   -moz-animation-duration: 1s;
+   -o-animation-duration: 1s;
+   animation-duration: 1s;
+ }
+ 
+ .gameText {
+   font-size: 30px;
+ }
+ 
+ #loseOrWin {
+   font-size: 80px;
+ }
+ 
+ .cat {
+   background: url(https://dl.dropbox.com/s/2ss4nugh4ib5ph9/cat.svg?dl=0);
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 50px;
+ }
+ 
+ .canvasContainer {
+   -vendor-animation-iteration-count: 1;
+ }
+ 
+ .row {
+   margin-bottom: 0;
+ }
+div#preload { display: none; }
+/*
+These cool line icons are from Gabriele Malaspina
+-------------------------------------------------
+
+More similar products here: http://www.succodesign.com/
+*/

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Halloween Name Generator (October 2021 #CodePenChallenge)</title>
+    <link rel="stylesheet" href="./css/namegen.css">
+
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+    <div class="terrible-text">
+        <a href="https://www.codegeeko.com/"><button align="right">Book a demo class to learn how to make this</button></a>
+        <div>
+            <label for="name">Enter Your Name</label>
+            <input id="real-name" type="text" placeholder="John Wick"></input>
+            <button onclick="generateResult()">Send</button>
+        </div>
+        <div class="result-wrapper">
+            <div class="result-p1">Your Halloween Name:</div>
+            <div id="result-name">???</div>
+        </div>
+    </div>
+
+    <div class="color-modes">
+        <div class="light-mode" onclick="changeColorMode('light')"></div>
+        <div class="dark-mode" onclick="changeColorMode('dark')"></div>
+    </div>
+    <!-- partial -->
+    <script src="./js/namegen.js"></script>
+
+</body>
+
+</html>
